@@ -1,16 +1,29 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
-import { AppRoutingModule } from './app-routing.module';
+//Server access
+import { HttpModule, JsonpModule } from '@angular/http';
+import { HttpClientModule } from '@angular/common/http';
+
+import { AppRoutingModule } from './main/routing/app-routing.module';
 import { MainComponent } from './main/main.component';
+import { AboutComponent } from './about/about.component';
+import { HomeComponent } from './home/home.component';
+import { SearchComponent } from './search/search.component';
 
 @NgModule({
   declarations: [
-    MainComponent
+    MainComponent,
+    AboutComponent,
+    HomeComponent,
+    SearchComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpModule,
+    JsonpModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [MainComponent]
